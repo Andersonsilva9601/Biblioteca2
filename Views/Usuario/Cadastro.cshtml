@@ -1,0 +1,35 @@
+@model TB_USUARIO
+
+<<h1 class="row justify-content-md-center">@ViewData["Title"]</h1>
+
+<div class="row justify-content-md-center">
+    @using (Html.BeginForm())
+    {
+
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome)
+            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Usuario)
+            @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Senha)
+            @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Acesso)
+            @Html.DropDownListFor(model => model.Acesso, new SelectList(ViewBag.Acessos, "Value", "Text"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Acesso, "", new { @class = "text-danger" })
+        </div>
+        <br />
+
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    }
+</div>

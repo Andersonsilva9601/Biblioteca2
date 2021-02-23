@@ -1,0 +1,57 @@
+@using System.Collections.Generic;
+@using System.Linq;
+
+@model List<TB_USUARIO>
+@{
+    ViewData["Title"] = "Listagem de usuários";
+}
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-inline" method="POST">
+            <div class="form-group mb-2">
+                <select name="TipoFiltro" asp-items="@ViewBag.Filtros" class="form-control">
+                </select>
+            </div>
+            <div class="form-group mb-2 mx-sm-3">
+                <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>Acesso</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (TB_USUARIO Usuário in Model)
+                {
+                    <tr>
+                        <td>@Usuário.Id</td>
+                        <td>@Usuário.Nome</td>
+                        <td>@Usuário.Usuario</td>
+                        <td>
+                            @{
+                                string acesso = ((List<SelectListItem>)ViewBag.Acessos).Where(p => p.Value == @Usuário.Acesso.ToString()).First().Text;
+                                <text>@acesso</text>
+
+                            }
+                        </td>
+                        <td><a href="/Usuario/Editar?Id=@Usuário.Id">Editar</a>
+                            <a href="/Usuario/Apagar?Id=@Usuário.Id">Apagar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

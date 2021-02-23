@@ -1,0 +1,90 @@
+@using System;
+
+@model ICollection<Emprestimo>
+@{
+    ViewData["Title"] = "Listagem de Empréstimos";
+}
+
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.dataTables.min.js" defer></script>
+<link rel="stylesheet" type="text/css" href="~/css/jquery.dataTables.min.css">
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-inline" method="POST">
+            <div class="form-group mb-2">
+                <select name="TipoFiltro" class="form-control">
+                    <option value="Usuario">Usuário</option>
+                    <option value="Livro">Livro</option>
+                </select>
+            </div>
+            <div class="form-group mb-2 mx-sm-3">
+                <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="example" class="display" width="100%"></table>
+
+
+        <table class="table table-striped table-bordered" id="table-emprestimos">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Data Empréstimo</th>
+                    <th>Data Devolução</th>
+                    <th>Livro</th>
+                    <th>Autor</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Emprestimo e in Model)
+                {
+                    var i = DateTime.Compare(e.DataDevolucao, DateTime.Now);
+
+                    <tr>
+                        <td>@e.Id</td>
+                        <td>@e.NomeUsuario @i</td>
+                        <td>@e.DataEmprestimo.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            @if (i <= 0)
+                            {
+                                <a style="color: #FF0000;">@e.DataDevolucao.ToString("dd/MM/yyyy")</a>
+                            } else
+                            { @e.DataDevolucao.ToString("dd/MM/yyyy")}
+                        </td>
+                        <td>@e.Livro.Titulo</td>
+                        <td>@e.Livro.Autor</td>
+                        <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#table-emprestimos').DataTable({
+            "paging": true,
+            "searching": false,
+            "ordering": false,
+            "info": false,
+            "bLengthChange": false,
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "zeroRecords": "Nenhum registro encontrado",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrando de _MAX_ registros no total)"
+            }
+        });
+    });
+</script>
