@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PyXtXa75lTOAVIBBAJs2PuZ5rszD9F+yEkzconqYRJ8x9UXA96T19rTmfL9f9RgEYkhVCj1Mx+yPdM5ljf7kgQ==",
+  "dgSpecHash": "4R54Z2bC5hpTBx2rTckjI97VszwvOFFMr7MeEThVYpD+v4tYqTzEgpbbdo2BMrQdYO2GNAB+sCNpJRqyaEKLeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\Biblioteca.csproj",
+  "projectFilePath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\Biblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anderson\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\Anderson\\.nuget\\packages\\microsoft.entityframeworkcore\\3.0.0\\microsoft.entityframeworkcore.3.0.0.nupkg.sha512",

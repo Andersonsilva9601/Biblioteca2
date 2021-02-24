@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\Biblioteca.csproj": {}
+    "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\Biblioteca.csproj": {
+    "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\Biblioteca.csproj",
+        "projectPath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\Anderson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Fontes\\obj\\",
+        "outputPath": "C:\\Users\\Anderson\\Documents\\Anderson\\Cursos\\Técnico em Informática para Internet\\UC07\\Atividade 2\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anderson\\AppData\\Roaming\\NuGet\\NuGet.Config"
